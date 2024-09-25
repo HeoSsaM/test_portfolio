@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+section li {
+    position: relative;
+    padding-left: 15px; /* 가상선택자와 텍스트간의 거리 */    
+}
+section li + li {
+    margin-top: 10px;
+}
+section li:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 8px; left: 0;
+    background: #cd867e;
+}
+/* header */
+header {
+    padding: 20px 0 0;
+}
+
+/* relation_link */
+.relation_link {
+    display: flex;
+    justify-content: space-between;
+}
+.relation_link > a {
+    width: 220px;
+    height: 40px;
+    line-height: 40px;    
+    text-align: center;
+}
+
+.relation_link > a.on {
+    background: #9D8C90;
+    color: #fff;
+}
+.relation_link > a:nth-child(1) {
+    border: 1px solid #cd867e;
+}
+.relation_link > a:nth-child(1):hover {
+    background-color: #cd867e;
+    color: #fff;
+}
+.relation_link > a:nth-child(2) {
+    border: 1px solid #9D8C90;
+}
+.relation_link > a:nth-child(2):hover {
+    background: #9D8C90;
+    color: #fff;
+}
+.relation_link > a:nth-child(3) {
+    border: 1px solid #a6b364;
+}
+.relation_link > a:nth-child(3):hover {
+    background: #a6b364;
+    color: #fff;
+}
+.relation_link > a:nth-child(4) {
+    border: 1px solid #d4ca95;
+}
+.relation_link > a:nth-child(4):hover {
+    background: #d4ca95;
+    color: #fff;
+}
+.relation_link > a:nth-child(5) {
+    border: 1px solid #bb9b72
+}
+.relation_link > a:nth-child(5):hover {
+    background: #bb9b72;
+    color: #fff;
+}
+.relation_link > a:nth-child(6) {
+    border: 1px solid #b0cbc7;
+}
+.relation_link > a:nth-child(6):hover {
+    background: #b0cbc7;
+    color: #fff;
+}
+/* header - top_header */
+.top_header {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* 자식 요소들의 세로 높이를 맞춰줌 */
+}
+.top_header .logo {
+    width: 15%;
+}
+.top_header form {
+    width: 45%;
+    margin-left: 5%;
+    text-align: center;
+}
+.top_header input[type="search"] {
+    width: 500px;
+    height: 40px;
+    border: 1px solid #9D8C90;
+    border-radius: 40px;
+    padding-left: 10px;
+    background: url(../img/searchBt.png) no-repeat right 15px center;
+}
+.top_header .util {
+    width: 30%;
+    /* text-align: right; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top_header .util > .btn_call {
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    background: #E05857 url(../img/icon_call.png) no-repeat 8px center;
+    border-radius: 3px;
+    padding-left: 34px;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.top_header .util > a + a {
+    margin-left: 8px;
+}
+.top_header select {
+    width: 130px;
+    height: 40px;
+    margin-left: 30px;
+    border: none;
+}
+
+/* nav */
+nav {
+    margin-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+nav .gnb_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+nav .gnb {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+nav .gnb > li {
+    width: 15%;
+}
+nav .gnb > li > a {
+    position: relative;
+    display: block;
+    padding: 25px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+}
+nav .gnb > li > a:after {
+    content: ''; /* 가상선택자에서 content를 생략하면 적용안됨. */
+    position: absolute;  
+    bottom: 0; left: 50%;
+    width: 0;
+    height: 4px;
+    background: #cd867e;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+nav .gnb > li > a:hover:after {
+    width: 100%;
+}
+nav .btn_mobile {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+}
+nav .btn_mobile img {
+    margin-top: 4px;  /* a의 height: 44px - 이미지크기 36px=8/2 */
+    width: 36px;
+}
+
+/* main image 영역 */
+#main_img {
+    position: relative;
+    height: 230px;
+}
+#main_img > img {
+    position: absolute;
+    top: 0; left: 0;
+    max-width: 100%;
+}
+#main_img > h2 {
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2; /* 반드시 position과 함께 써야함 - z-index:1*/
+}
+
+/* main */
+main {
+    padding: 60px 0;
+}
+main h3 {
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 60px;
+    text-align: center;
+}
+main h3:after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #000;
+}
+main h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 25px;
+}
+main > figure { margin-bottom: 80px;}
+main .content {
+   padding: 40px;
+   border: 1px solid rgba(0,0,0,0.15);
+   box-sizing: border-box;
+   margin-top: 40px; 
+}
+
+/* content - dl */
+.content {position: relative;}
+.content > dl {
+    background: #F9F9F9;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.content > dl > div {
+    display: flex;
+    margin-bottom: 20px;
+}
+.content > dl dt {
+    font-weight: 500;
+    color: #8B767A;
+    width: 100px;
+}
+
+.content .btn_book {
+    position: absolute;
+    top: 60%; right: 100px;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff url(../img/menu_arrow.png) no-repeat right 20px center;
+    padding: 0 20px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+.content .btn_book:hover {
+    background-color: #8B767A;
+    background-image: url(../img/menu_arrow_on.png);
+    color: #fff;
+}
+
+/* 조리사 */
+.chef_area {
+    display: flex;
+    justify-content: space-between;
+}
+.chef_area > figure {
+    width: 50%
+}
+.chef_area > .chef_info {
+    width: 45%
+}
+.chef_info > strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+}
+.content > .chef_area ul ul {
+    margin-left: 24px;
+}
+.content > .chef_area li li:before {
+    background: none;
+}
+
+/* 한정식 메뉴안내 */
+.content02 {
+    display: flex;
+    margin-top: 40px;
+}
+.content02 figure {
+    width: 50%;
+}
+.content02 .menu_info {
+    position: relative;
+    width: 45%;
+    margin-left: 5%;
+}
+.content02 .menu_info h4 {
+    position: absolute;
+    top: 40%;
+}
+.content02 .menu_info h4:after {
+    content: '';
+    position: absolute;
+    top: 50px; left: 0;
+    width: 1px;
+    height: 100px;
+    background: rgba(157, 140, 144, 0.5);
+}
+.content02 .menu_info p {
+    position: absolute;
+    bottom: 0;
+    line-height: 2;
+}
+
+/* content03 */
+.content03 {
+    margin-top: 100px;
+}
+.content03 h4 {
+    text-align: center;
+}
+.content03 .menu_info_area {
+    display: flex;
+    justify-content: space-between;
+    background: #F9F9F9;
+}
+.content03 figure {
+    width: 50%;
+}
+.content03 .menu_info_text {
+    display: flex;
+    align-items: center; /* 높이기준 세로 정렬 -middle */
+    padding: 0 50px; 
+    width: 50%;
+    box-sizing: border-box;
+}
+.content03 .menu_info_text li {  
+    position: relative;  
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.content03 .menu_info_text li a {
+    display: inline-block;
+    width: 150px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 20px;
+    border: 1px solid #000;
+    color: #000;
+    background: url(../img/menu_arrow.png) no-repeat right 20px center;
+    transition: all 0.3s;
+}
+.content03 .menu_info_text li a:hover {
+    background-color: #000;
+    background-image: url(../img/menu_arrow_on.png);
+    color: #fff
+}
+.content03 .menu_info_text li:before {
+    top: 10px
+}
+.content03 .menu_info_text li:after {
+    content: '';
+    position: absolute;
+    top: 38%; left: 38%;
+    width: 160px;
+    height: 2px;
+    background: transparent;
+    border-bottom: 1px dashed rgba(157, 140, 144, 0.7);
+}

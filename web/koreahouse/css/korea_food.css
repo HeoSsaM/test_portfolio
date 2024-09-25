@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    padding: 20px 0;
+}
+
+/* relation_link */
+.relation_link {
+    display: flex;
+    justify-content: space-between;
+}
+.relation_link > a {
+    width: 220px;
+    height: 40px;
+    line-height: 40px;    
+    text-align: center;
+}
+
+.relation_link > a.on {
+    background: #9D8C90;
+    color: #fff;
+}
+.relation_link > a:nth-child(1) {
+    border: 1px solid #cd867e;
+}
+.relation_link > a:nth-child(1):hover {
+    background-color: #cd867e;
+    color: #fff;
+}
+.relation_link > a:nth-child(2) {
+    border: 1px solid #9D8C90;
+}
+.relation_link > a:nth-child(2):hover {
+    background: #9D8C90;
+    color: #fff;
+}
+.relation_link > a:nth-child(3) {
+    border: 1px solid #a6b364;
+}
+.relation_link > a:nth-child(3):hover {
+    background: #a6b364;
+    color: #fff;
+}
+.relation_link > a:nth-child(4) {
+    border: 1px solid #d4ca95;
+}
+.relation_link > a:nth-child(4):hover {
+    background: #d4ca95;
+    color: #fff;
+}
+.relation_link > a:nth-child(5) {
+    border: 1px solid #bb9b72
+}
+.relation_link > a:nth-child(5):hover {
+    background: #bb9b72;
+    color: #fff;
+}
+.relation_link > a:nth-child(6) {
+    border: 1px solid #b0cbc7;
+}
+.relation_link > a:nth-child(6):hover {
+    background: #b0cbc7;
+    color: #fff;
+}
+/* header - top_header */
+.top_header {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* 자식 요소들의 세로 높이를 맞춰줌 */
+}
+.top_header .logo {
+    width: 15%;
+}
+.top_header form {
+    width: 45%;
+    margin-left: 5%;
+    text-align: center;
+}
+.top_header input[type="search"] {
+    width: 500px;
+    height: 40px;
+    border: 1px solid #9D8C90;
+    border-radius: 40px;
+    padding-left: 10px;
+    background: url(../img/searchBt.png) no-repeat right 15px center;
+}
+.top_header .util {
+    width: 30%;
+    /* text-align: right; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top_header .util > .btn_call {
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    background: #E05857 url(../img/icon_call.png) no-repeat 8px center;
+    border-radius: 3px;
+    padding-left: 34px;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.top_header .util > a + a {
+    margin-left: 8px;
+}
+.top_header select {
+    width: 130px;
+    height: 40px;
+    margin-left: 30px;
+    border: none;
+}
